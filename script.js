@@ -113,10 +113,10 @@ function addActiveNavStyle() {
         
         if (currentScroll >= sectionTop - 100 && currentScroll < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
-                link.style.color = '#1a1a1a';
+                link.style.color = '#e0e0e0';
                 if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.style.color = '#0066cc';
-                    link.style.borderBottom = '3px solid #0066cc';
+                    link.style.color = '#00d4ff';
+                    link.style.borderBottom = '3px solid #00d4ff';
                 } else {
                     link.style.borderBottom = 'none';
                 }
