@@ -148,6 +148,12 @@ p {
     gap: 2.5rem;
 }
 
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+}
+
 .nav-link {
     text-decoration: none;
     color: var(--text-light);

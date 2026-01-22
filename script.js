@@ -6,23 +6,28 @@ const sidebar = document.querySelector('.sidebar');
 const overlay = document.querySelector('.overlay');
 const navLinks = document.querySelectorAll('.sidebar .nav-link');
 
-menuBtn.addEventListener('click', () => {
-    sidebar.classList.add('open');
-    overlay.classList.add('show');
-});
+if (menuBtn && sidebar && overlay) {
+    menuBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+        overlay.classList.toggle('show');
+        menuBtn.classList.toggle('active');
+    });
 
-overlay.addEventListener('click', () => {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('show');
-});
-
-// Close sidebar when link is clicked
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    overlay.addEventListener('click', () => {
         sidebar.classList.remove('open');
         overlay.classList.remove('show');
+        menuBtn.classList.remove('active');
     });
-});
+
+    // Close sidebar when link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('show');
+            menuBtn.classList.remove('active');
+        });
+    });
+}
 
 
 /* ===========================
