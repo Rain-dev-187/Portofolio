@@ -483,6 +483,15 @@ p {
 }
 
 /* ===========================
+   SOFTWARE SECTION
+   =========================== */
+.software {
+    padding: 6rem 20px;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+/* ===========================
    EDUCATION SECTION
    =========================== */
 .education {
@@ -734,6 +743,11 @@ p {
         border-bottom: 1px solid rgba(0, 212, 255, 0.2);
         padding: 2rem 0;
         backdrop-filter: blur(10px);
+        gap: 0;
+    }
+
+    .nav-menu li {
+        padding: 0.8rem 0;
     }
 
     .nav-menu.active {
@@ -842,6 +856,7 @@ p {
     .skills,
     .projects,
     .tools,
+    .software,
     .education,
     .languages,
     .contact {
