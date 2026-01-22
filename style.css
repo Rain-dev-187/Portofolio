@@ -192,6 +192,27 @@ p {
     box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
+/* Menu Backdrop Overlay */
+.nav-menu::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.nav-menu.active::before {
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* ===========================
    HERO SECTION
    =========================== */
@@ -802,11 +823,11 @@ p {
     .nav-menu {
         display: flex;
         position: fixed;
-        right: -250px;
+        right: -280px;
         top: 70px;
         flex-direction: column;
         background: rgba(15, 20, 25, 0.98);
-        width: 250px;
+        width: 280px;
         text-align: center;
         transition: 0.3s;
         border-bottom: 1px solid rgba(0, 212, 255, 0.2);
