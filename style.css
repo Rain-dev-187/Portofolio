@@ -840,8 +840,20 @@ p {
         overflow-y: auto;
         box-shadow: 2px 0 15px rgba(0, 212, 255, 0.2);
     }
+
     .nav-menu li {
         padding: 0.8rem 0;
+    }
+
+    .nav-menu .nav-link {
+        color: #e0e0e0 !important;
+        font-size: 1.1rem;
+        border-bottom: none !important;
+        text-shadow: none !important;
+    }
+
+    .nav-menu .nav-link:hover {
+        color: #00ffff !important;
     }
 
     .nav-menu.active {
