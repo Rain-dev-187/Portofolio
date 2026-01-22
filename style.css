@@ -148,12 +148,6 @@ p {
     gap: 2.5rem;
 }
 
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-}
-
 .nav-link {
     text-decoration: none;
     color: var(--text-light);
@@ -825,6 +819,11 @@ p {
         width: 140px;
         height: 140px;
         margin-bottom: 2rem;
+    }
+
+    /* Hide desktop navbar menu on mobile */
+    .nav-menu {
+        display: none !important;
     }
 
     /* Sidebar Mobile Menu */
