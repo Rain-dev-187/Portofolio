@@ -125,7 +125,7 @@ function addActiveNavStyle() {
         if (currentScroll >= sectionTop - 100 && currentScroll < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
                 // Don't set inline styles for mobile sidebar nav links
-                if (!link.closest('.nav-menu')) {
+                if (!link.closest('.sidebar')) {
                     link.style.color = '#e0e0e0';
                     if (link.getAttribute('href') === `#${sectionId}`) {
                         link.style.color = '#00ffff';

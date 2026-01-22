@@ -212,6 +212,7 @@ p {
 /* Sidebar */
 .sidebar {
     display: none;
+    flex-direction: column;
 }
 
 /* ===========================
@@ -828,6 +829,7 @@ p {
 
     /* Sidebar Mobile Menu */
     .sidebar {
+        display: flex;
         position: fixed;
         top: 0;
         left: -100%;
@@ -870,6 +872,11 @@ p {
         border-radius: 8px;
         border-bottom: none !important;
         text-shadow: none !important;
+        position: relative;
+    }
+
+    .sidebar .nav-link::after {
+        display: none !important;
     }
 
     .sidebar .nav-link:hover {
