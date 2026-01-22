@@ -452,13 +452,17 @@ p {
 }
 
 .skill-level-title {
-    font-size: 1.4rem;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 900;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.2);
 }
 
 .tools-grid {
@@ -793,7 +797,7 @@ p {
     }
 
     .nav-menu {
-        display: none;
+        display: flex;
         position: fixed;
         left: -100%;
         top: 70px;
@@ -806,6 +810,7 @@ p {
         padding: 2rem 0;
         backdrop-filter: blur(10px);
         gap: 0;
+        z-index: 999;
     }
 
     .nav-menu li {
