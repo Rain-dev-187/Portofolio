@@ -799,7 +799,7 @@ p {
     .nav-menu {
         display: flex;
         position: fixed;
-        left: -100%;
+        right: -100%;
         top: 70px;
         flex-direction: column;
         background: rgba(15, 20, 25, 0.98);
@@ -818,7 +818,7 @@ p {
     }
 
     .nav-menu.active {
-        left: 0;
+        right: 0;
     }
 
     .hamburger {
