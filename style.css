@@ -179,14 +179,17 @@ p {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    order: -1;
 }
 
 .hamburger span {
-    width: 25px;
+    width: 28px;
     height: 3px;
     background-color: var(--primary-color);
-    margin: 5px 0;
+    margin: 6px 0;
     transition: var(--transition);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 /* ===========================
