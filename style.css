@@ -823,7 +823,7 @@ p {
     .nav-menu {
         display: flex;
         position: fixed;
-        right: -280px;
+        left: -280px;
         top: 70px;
         flex-direction: column;
         background: rgba(15, 20, 25, 0.98);
@@ -831,7 +831,7 @@ p {
         text-align: center;
         transition: 0.3s;
         border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-        border-left: 1px solid rgba(0, 212, 255, 0.2);
+        border-right: 1px solid rgba(0, 212, 255, 0.2);
         padding: 2rem 0;
         backdrop-filter: blur(10px);
         gap: 0;
@@ -845,7 +845,7 @@ p {
     }
 
     .nav-menu.active {
-        right: 0;
+        left: 0;
     }
 
     .hamburger {
