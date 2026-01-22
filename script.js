@@ -1,32 +1,27 @@
 /* ===========================
    MOBILE MENU TOGGLE
    =========================== */
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
-const menuOverlay = document.querySelector('.menu-overlay');
+const menuBtn = document.querySelector('.menu-btn');
+const sidebar = document.querySelector('.sidebar');
+const overlay = document.querySelector('.overlay');
+const navLinks = document.querySelectorAll('.sidebar .nav-link');
 
-// Toggle mobile menu
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    menuOverlay.classList.toggle('active');
+menuBtn.addEventListener('click', () => {
+    sidebar.classList.add('open');
+    overlay.classList.add('show');
 });
 
-// Close menu when link is clicked
+overlay.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('show');
+});
+
+// Close sidebar when link is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        menuOverlay.classList.remove('active');
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
     });
-});
-
-// Close menu when overlay clicked
-menuOverlay.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-    menuOverlay.classList.remove('active');
 });
 
 
@@ -124,14 +119,17 @@ function addActiveNavStyle() {
         
         if (currentScroll >= sectionTop - 100 && currentScroll < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
-                link.style.color = '#e0e0e0';
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.style.color = '#00ffff';
-                    link.style.borderBottom = '3px solid #00ffff';
-                    link.style.textShadow = '0 0 10px rgba(0, 255, 255, 0.8)';
-                } else {
-                    link.style.borderBottom = 'none';
-                    link.style.textShadow = 'none';
+                // Don't set inline styles for mobile sidebar nav links
+                if (!link.closest('.nav-menu')) {
+                    link.style.color = '#e0e0e0';
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.style.color = '#00ffff';
+                        link.style.borderBottom = '3px solid #00ffff';
+                        link.style.textShadow = '0 0 10px rgba(0, 255, 255, 0.8)';
+                    } else {
+                        link.style.borderBottom = 'none';
+                        link.style.textShadow = 'none';
+                    }
                 }
             });
         }
