@@ -828,16 +828,19 @@ p {
         flex-direction: column;
         background: rgba(15, 20, 25, 0.98);
         width: 280px;
+        min-width: 280px;
+        max-width: 280px;
         text-align: center;
-        transition: 0.3s;
+        transition: left 0.3s ease;
         border-bottom: 1px solid rgba(0, 212, 255, 0.2);
         border-right: 1px solid rgba(0, 212, 255, 0.2);
         padding: 2rem 0;
         backdrop-filter: blur(10px);
         gap: 0;
-        z-index: 999;
+        z-index: 1000;
         max-height: calc(100vh - 70px);
         overflow-y: auto;
+        box-shadow: 2px 0 15px rgba(0, 212, 255, 0.2);
     }
 
     .nav-menu li {
@@ -846,6 +849,18 @@ p {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    /* Overlay backdrop */
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 70px);
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
     }
 
     .hamburger {
