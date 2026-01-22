@@ -115,10 +115,12 @@ function addActiveNavStyle() {
             navLinks.forEach(link => {
                 link.style.color = '#e0e0e0';
                 if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.style.color = '#00d4ff';
-                    link.style.borderBottom = '3px solid #00d4ff';
+                    link.style.color = '#00ffff';
+                    link.style.borderBottom = '3px solid #00ffff';
+                    link.style.textShadow = '0 0 10px rgba(0, 255, 255, 0.8)';
                 } else {
                     link.style.borderBottom = 'none';
+                    link.style.textShadow = 'none';
                 }
             });
         }
